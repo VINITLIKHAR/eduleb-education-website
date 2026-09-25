@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Contact.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 
         <nav id="main-menu" class="nav-main">
             <ul>
-                <li class="has-arrow"><a href="#">Home <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li class="has-arrow"><a href="./index.html">Home <i class="fa-solid fa-chevron-down"></i></a></li>
                 <li><a href="about.html">About</a></li>
                 <li class="has-arrow"><a href="course.html">Course <i class="fa-solid fa-chevron-down"></i></a></li>
                 <li class="has-arrow"><a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a></li>
@@ -41,3 +41,221 @@
             <span></span><span></span><span></span>
         </button>
     </header>
+
+    <!-- ================================
+        PAGE BANNER
+    ================================ -->
+    <section class="page-banner">
+        <div class="banner-decorations">
+            <div class="shape-circle"></div>
+            <div class="shape-dot"></div>
+            <div class="shape-arrow">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M70,20 Q60,40 50,45 Q40,50 35,65 Q30,80 15,80" stroke="#FFC107" stroke-width="2"
+                        stroke-linecap="round" fill="none" />
+                    <path d="M25,75 L15,80 L18,70" stroke="#FFC107" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" fill="none" />
+                    <path d="M85,25 L75,40" stroke="#FFC107" stroke-width="2" stroke-linecap="round" fill="none" />
+                    <path d="M90,45 L78,50" stroke="#FFC107" stroke-width="2" stroke-linecap="round" fill="none" />
+                </svg>
+            </div>
+        </div>
+        <div class="banner-content">
+            <h1>Get In Touch</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> contact
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+    ADDRESS / CONTACT INFO SECTION
+    ================================ -->
+    <section class="address_area section-padding">
+        <div class="container">
+            <div class="row text-center">
+
+                <!-- Location -->
+                <div class="col-lg-4 col-md-4 col-sm-12 no-padding box-row">
+                    <div class="single_address sa_one">
+                        <i class="fa-regular fa-map"></i>
+                        <h4>Our Location</h4>
+                        <p>3481 Melrose Place, Beverly Hills <br> CA 90210</p>
+                    </div>
+                </div>
+
+                <!-- Telephone -->
+                <div class="col-lg-4 col-md-4 col-sm-12 no-padding box-row">
+                    <div class="single_address sa_two">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h4>Telephone</h4>
+                        <p>(+1) 517 397 7100</p>
+                        <p>(+1) 411 315 8138</p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-lg-4 col-md-4 col-sm-12 no-padding box-row">
+                    <div class="single_address sa_three">
+                        <i class="fa-regular fa-envelope"></i>
+                        <h4>Send Email</h4>
+                        <p>Info@example.com</p>
+                        <p>admin@example.com</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================
+    CONTACT FORM + MAP SECTION
+================================ -->
+    <section id="contact" class="contact_area section-padding">
+        <div class="container">
+            <div class="contact-row">
+
+                <!-- LEFT: Contact Form -->
+                <div class="contact-form-col">
+                    <form class="contact-form" name="enq" method="post" action="contact.php">
+
+                        <!-- Name + Email (side by side) -->
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <!-- Subject (full width) -->
+                        <div class="form-group">
+                            <label>Your Subject</label>
+                            <input type="text" name="subject" class="form-control" required>
+                        </div>
+
+                        <!-- Message (full width) -->
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea name="message" class="form-control" rows="6" required></textarea>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-btn-wrap">
+                            <button type="submit" class="btn_one" id="submitButton">Send Message</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- RIGHT: Google Map -->
+                <div class="contact-map-col">
+                    <div class="map-card">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.957183635167!2d-74.00402768559431!3d40.71895904512855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a1316e7a7%3A0x47bb20eb6074b3f0!2sNew%20Work%20City%20-%20(CLOSED)!5e0!3m2!1sen!2sus!4v1600305497356!5m2!1sen!2sus"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+
+                <div class="single_footer">
+                    <a href="index.html" class="footer-logo"><img src="./image/logo.png" alt="Eduleb"></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis
+                        dignissim.</p>
+                    <div class="social_profile">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="single_footer">
+                    <h4>About Eduleb</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Instructor Registration</a></li>
+                        <li><a href="#">Become A Teacher</a></li>
+                        <li><a href="#">All Instrustors</a></li>
+                        <li><a href="#">Asked Question</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="single_footer">
+                    <h4>Popular Courese</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Arts &amp; Design</a></li>
+                        <li><a href="#">Visual Design</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Code Inspection</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="single_footer">
+                    <h4>Contact Info</h4>
+                    <div class="sf_contact">
+                        <i class="fa-regular fa-map"></i>
+                        <p>2570 Quadra Street Victoria Road, New York, Canada</p>
+                    </div>
+                    <div class="sf_contact">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>+88 457 845 695</p>
+                    </div>
+                    <div class="sf_contact">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p><a href="tel:+88457845695">Contact Whatsapp</a></p>
+                    </div>
+                    <div class="sf_contact">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>example@yourmail.com</p>
+                    </div>
+                </div>
+
+                <div class="single_footer">
+                    <h4>Download App</h4>
+                    <p class="dl-text">Download our app from app store and goole play store.</p>
+                    <a href="#"><img src="./image/google-play.jpg" class="foot_img" alt="Google Play"></a>
+                    <a href="#"><img src="./image/app-store.jpg" class="foot_img" alt="App Store"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024. All Rights Reserved by <b>Bestwpware</b> • Distributed by <b>ThemeWagon</b></p>
+        </div>
+    </footer>>
+
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="./js/Contact.js"></script>
+</body>
+
+</html>

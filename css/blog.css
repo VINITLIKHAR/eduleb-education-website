@@ -579,154 +579,259 @@ header.scrolled {
 
 
 
+/* =====================================================
+   BLOG PAGE - RESPONSIVE ONLY (no colour/style changes)
+   Paste at the VERY BOTTOM of blog.css
+   (or keep as a separate file and link it AFTER blog.css)
+===================================================== */
 
-
-
-
-
-
-
-
-
-/* ================================
-   HEADER & FOOTER MEDIA QUERIES
-================================ */
-
-/* ===== Desktop (1200px) ===== */
-@media (max-width: 1200px) {
-  /* Fits larger screens prior to layout shifts */
+/* ---------- Base safety fixes (all screens) ---------- */
+img {
+  max-width: 100%;
 }
 
-/* ===== Tablet & Mobile Nav Toggle (992px) ===== */
-@media (max-width: 992px) {
-  /* Header */
+.blog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* stops grid overflowing */
+}
+
+.blog-card {
+  min-width: 0;
+}
+
+.blog-body h3 {
+  overflow-wrap: break-word;
+}
+
+.blog-btn {
+  white-space: nowrap; /* "Read More" never wraps to 2 lines */
+}
+
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- Laptop / small desktop ---------- */
+@media (max-width: 1200px) {
   header {
-    height: 72px;
-    padding: 0 20px;
-    background: #fff;
-  }
-
-  .logo img {
-    max-height: 30px;
-  }
-
-  .sign-in {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Fullscreen Mobile Drawer */
-  .nav-main {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    background: #000;
-    padding: 90px 0 30px;
-    overflow-y: auto;
-    z-index: 1001;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-12px);
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease,
-      visibility 0.3s;
-  }
-
-  .nav-main.open {
-    opacity: 1;
-    visibility: visible;
-    transform: none;
+    padding: 0 30px;
   }
 
   .nav-main ul {
-    flex-direction: column;
-    gap: 0;
-    font-weight: 400;
+    gap: 1.4rem;
+  }
+
+  .blog-grid {
+    gap: 24px;
+  }
+
+  .footer-grid {
+    gap: 30px;
+  }
+}
+
+/* ---------- Tablet (2 columns) ---------- */
+@media (max-width: 992px) {
+  .blog_area {
+    padding: 70px 20px 60px;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .page-banner {
+    padding: 100px 20px;
+  }
+
+  .banner-content h1 {
+    font-size: 2.9rem;
+  }
+
+  .shape-arrow {
+    width: 70px;
+    right: 8%;
+  }
+
+  .shape-circle {
+    left: 10%;
+  }
+
+  /* chevron icon duplicates the drawer's own arrow on mobile */
+  .nav-main ul li a i {
+    display: none;
+  }
+}
+
+/* ---------- Large phones / small tablets ---------- */
+@media (max-width: 768px) {
+  .blog_area {
+    padding: 55px 16px 50px;
+  }
+
+  .blog-body {
+    padding: 24px 22px 28px;
+  }
+
+  .blog-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .page-banner {
+    padding: 80px 16px;
+  }
+
+  .banner-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .breadcrumb {
     font-size: 1rem;
   }
 
-  .nav-main ul li {
-    position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  }
-
-  .nav-main ul li a {
-    display: block;
-    padding: 22px 56px;
-    color: #fff;
-    font-family: "Jost", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-  }
-
-  .nav-main ul li a:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  /* Submenu arrow for mobile */
-  .nav-main ul li.has-arrow::after {
-    content: "";
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    width: 7px;
-    height: 7px;
-    border-top: 1.5px solid rgba(255, 255, 255, 0.6);
-    border-right: 1.5px solid rgba(255, 255, 255, 0.6);
-    transform: translateY(-50%) rotate(45deg);
-    pointer-events: none;
-  }
-
-  /* Footer Mid-Screen Layout */
-  .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 30px;
+  .shape-arrow {
+    width: 55px;
   }
 }
 
-/* ===== Tablet (768px) ===== */
-@media (max-width: 768px) {
-  .footer {
-    padding-top: 60px;
-  }
-}
-
-/* ===== Mobile (640px) ===== */
+/* ---------- Phones (1 column) ---------- */
 @media (max-width: 640px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
+  .blog-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
 
-  .single_footer h4 {
-    margin-bottom: 16px;
+  .blog-img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .blog-meta {
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+  }
+
+  .blog-btn {
+    padding: 14px 30px;
+  }
+
+  .page-banner {
+    padding: 64px 16px;
+  }
+
+  .banner-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .shape-dot {
+    top: 25%;
+    left: 70%;
+  }
+
+  .footer-container {
+    padding: 0 16px;
   }
 
   .footer-bottom {
-    font-size: 0.82rem;
-  }
-
-  .foot_img {
-    width: 100%;
-    max-width: 200px;
+    margin-top: 50px;
+    line-height: 1.6;
   }
 }
 
-/* ===== Small Mobile (600px) ===== */
-@media (max-width: 600px) {
-  .to-top {
-    width: 46px;
-    height: 46px;
+/* ---------- Small phones ---------- */
+@media (max-width: 480px) {
+  header {
+    height: 64px;
+    padding: 0 16px;
+  }
+
+  .logo img {
+    max-height: 26px;
+  }
+
+  .menu-toggle {
+    width: 34px;
+  }
+
+  .nav-main {
+    padding: 80px 0 24px;
+  }
+
+  .nav-main ul li a {
+    padding: 18px 32px;
+  }
+
+  .nav-main ul li.has-arrow::after {
+    right: 20px;
+  }
+
+  .blog_area {
+    padding: 45px 14px 40px;
+  }
+
+  .blog-body {
+    padding: 20px 18px 24px;
+  }
+
+  .blog-body h3 {
+    font-size: 1.12rem;
+    line-height: 1.4;
+  }
+
+  .blog-btn {
+    padding: 13px 26px;
+    font-size: 0.88rem;
+  }
+
+  .page-banner {
+    padding: 52px 14px;
+  }
+
+  .banner-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.92rem;
+  }
+
+  .shape-arrow {
+    display: none;
+  }
+
+  .shape-circle {
+    width: 14px;
+    height: 14px;
+    left: 8%;
+  }
+
+  .footer {
+    padding-top: 45px;
+  }
+
+  .foot_img {
+    max-width: 170px;
+  }
+
+  .social_profile a {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ---------- Very small phones (320px) ---------- */
+@media (max-width: 360px) {
+  .banner-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .blog-body h3 {
     font-size: 1.05rem;
-    right: 12px;
-    bottom: 12px;
+  }
+
+  .blog-btn {
+    padding: 12px 22px;
   }
 }
